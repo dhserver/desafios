@@ -4,9 +4,6 @@ gasto = ARGV[2].to_f
 u = (precio_venta*usuario)-gasto
 impuesto = u * 35 /100
 
-
-
-
 if (u > 0)
     
     puts (u-impuesto).to_i
