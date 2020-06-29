@@ -1,14 +1,16 @@
-precio_venta = ARGV[0]
-usuario = ARGV[1]
-usuario_p = ARGV[2]
-usuario_g = ARGV[3]
-gasto = ARGV[4]
+user_n = ARGV[0].to_i
+user_p = ARGV[1].to_i
+user_f = ARGV[2].to_i
+users = (user_n * 1) + (user_p * 2) + (user_f *0)
+price = 50
+gasto = 20000
+f =  price.to_i * users.to_i - gasto.to_i
+tax = f * 35 / 100
 
-u = (precio_venta*usuario)-gasto
 
-if (u >=0)
-    u
-    
+
+if f > 0
+    puts f - tax
+else 
+    puts f
 end
-
-puts u.to_i
