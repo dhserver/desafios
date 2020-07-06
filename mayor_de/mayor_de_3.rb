@@ -4,50 +4,40 @@ c = ARGV[2].to_i
 
 if a > b && a > c 
 
-    print "\n"
-    print " A es mayor que B y C , valor de A = #{a} \n "
+   puts "#{a}"
 
-elsif a > b && a = c
 
-    print "\n"
-    print " A y C es mayor que B , valor de A,C = #{a},#{c} \n"
-
-elsif a > c && a = b
-
-    print "\n"
-    print " A y B es mayor que  C , valor de A,C = #{a},#{b} \n"
-    
 elsif b > a && b > c 
 
-    print "\n"
-    print " B es mayor que A y C , valor de B = #{b} \n"
-
-elsif b > a && b = c
-
-    print "\n"
-    print " B y C es mayor que A , valor de B,C = #{b},#{c} \n"
-
-elsif b > c && b = a
-
-    print "\n"
-    print " B y A es mayor que  C , valor de B,A = #{b},#{a} \n"
-    
+    puts "#{b}"
 
 elsif c > a && c > b 
 
-    print "\n"
-    print " C es mayor que A y B , valor de C = #{c} \n"
+    puts "#{c}"
 
-elsif c > a && c = b
+elsif a == b && a > c
 
-    print "\n"
-    print " C y B es mayor que A  , valor de C,B = #{c},#{b} \n"
+    puts ( a + b)/2
 
-elsif c > b && c = a
+elsif a == c && a > b
 
-    print "\n"
-    print " C y A es mayor que B, valor de C,A = #{c},#{a} \n"
+    puts (a + c)/2
 
+elsif b == a && b > c
+
+    puts (b + a)/2
+
+elsif b == c && b > a 
+    
+    puts  (b + c)/2
+
+elsif c == a && c > b
+
+    puts (c + a)/2
+ 
+elsif c == b && c > a 
+    
+    puts (c + a)/2
 
     
 end
