@@ -7,13 +7,6 @@ def to_minutes(array)
     n.times do |i|
         min = array[i]/60
         results.push min
-        # if array[i] <= 90
-        #     results.push 'bien'
-        # elsif array[i] < 90 || array[i] > 180
-        #     results.push 'mejorable'
-        # elsif array[i] >= 180
-        #     results.push 'mal'
-        # end
     end
     results    
 end
