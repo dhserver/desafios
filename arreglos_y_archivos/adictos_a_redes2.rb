@@ -1,6 +1,6 @@
 
 
-def scan_addicts(array)
+def scan_addicts2(array)
     results = []
     n = array.count
     n.times do |i|
