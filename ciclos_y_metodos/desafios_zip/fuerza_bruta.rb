@@ -7,4 +7,4 @@ while f != p
     # puts i
 end
 
-puts "#{i.to_s} intentos tu password es  #{f}"
+puts "#{i.to_s} intentos tu password es #{f}"
