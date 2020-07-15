@@ -20,7 +20,7 @@ d = a.select {|x| x > 5}
 
 print "Select > 5 \t#{d}\n"
 
-e = a.inject {|suma, x| suma + x}
+e = a.inject(0) {|suma, x| suma + x}
 
 print "Suma_de_todos \t#{e}\n"
 
