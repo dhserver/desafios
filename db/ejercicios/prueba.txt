@@ -1,0 +1,10 @@
+fhernandez=# UPDATE Agenda SET nick='Hermosuela' WHERE numero_telefonico='23456778';
+UPDATE 1
+fhernandez=# SELECT * FROM Agenda;
+    nick    | numero_telefonico 
+------------+-------------------
+ Pancho     | 97856768
+ xanxito    | 12345678
+ Hermosita  | 87654321
+ Hermosuela | 23456778
+(4 rows)
