@@ -1,0 +1,83 @@
+-- PARTE N°1 --
+
+-- Crear Base de datos posts
+CREATE DATABASE posts;
+
+-- Crear tabla post, con los atributos id, nombre de usuario, fecha de creación, contenido,descripción
+CREATE TABLE post (
+    id SERIAL,
+    nombre_de_usuario VARCHAR(25),
+    fecha_de_creacion DATE,
+    contenido VARCHAR(100),
+    descripcion VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+-- Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos" 
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Pamela','2020-07-25','Post1','desafio01');
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Pamela','2020-07-26','Post2','desafio01');
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion)
+VALUES ('Carlos','2020-07-25','Post1','desafio01');
+
+-- Modificar la tabla post, agregando la columna título
+ALTER TABLE post ADD título;
+
+-- Agregar título a las publicaciones ya ingresadas
+UPDATE post SET título='título1' WHERE id='1';
+UPDATE post SET título='título2' WHERE id='2';
+UPDATE post SET título='título3' WHERE id='3';
+
+-- Insertar 2 post para el usuario "Pedro"
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion, título)
+VALUES ('Pedro','2020-07-26','Post1','desafio01', 'titulo4');
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion, título)
+VALUES ('Pedro','2020-07-27','Post2','desafio01', 'titulo5');
+
+-- Eliminar el post de Carlos 
+DELETE FROM post WHERE id='3';
+
+-- Ingresar un nuevo post para el usuario "Carlos"
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion, título)
+VALUES ('Carlos','2020-07-27','Post2','desafio01', 'titulo6');
+
+-- PARTE N°2 --
+
+-- Crear una nueva tabla, llamada comentarios, con los atributos id, fecha y hora de creación,contenido, que se relacione con la tabla post.
+CREATE TABLE comentarios(
+    id SERIAL,
+    fecha_y_hora TIMESTAMP,
+    contenido VARCHAR(100),
+    FOREIGN KEY (id) REFERENCES post(id)
+);
+
+-- Crear 2 comentarios para el post de "Pamela" y 4 para "Carlos" 
+
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('1','2020-07-25','Comentario Pamela 1');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('2','2020-07-26','Comentario Pamela 2');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('6','2020-07-27','Comentario Carlos 1');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('6','2020-07-27','Comentario Carlos 2');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('6','2020-07-27','Comentario Carlos 3');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('6','2020-07-27','Comentario Carlos 4');
+
+-- Crear un nuevo post para "Margarita" 
+INSERT INTO post (nombre_de_usuario, fecha_de_creacion, contenido, descripcion, título)
+VALUES ('Margarita','2020-07-27','Post1','desafio01', 'titulo7');
+
+--Ingresar 5 comentarios para el post de Margarita. 
+VALUES('7','2020-07-27','Comentario Margarita 1');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('7','2020-07-27','Comentario Margarita 2');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('7','2020-07-27','Comentario Margarita 3');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('7','2020-07-27','Comentario Margarita 4');
+INSERT INTO comentarios(id, fecha_y_hora, contenido) 
+VALUES('7','2020-07-27','Comentario Margarita 5');
