@@ -1,1 +1,16 @@
-prestamo_libro(id_libro, título_libro, autor_libro,{editorial},{lector},id_prestamo,fecha_incio_prestamo, fecha_fin_prestamo)
+1FN
+
+prestamo(id_libro, título_libro, {id_autor},{editorial},{lector},id_préstamo,fecha_inicio_prestamo, fecha_fin_prestamo)
+
+
+2FN
+
+tabla_libro( id_libro, título_libro)
+
+tabla_auto(id_autor, nombre_autor)
+
+tabla_editorial(id_editorial, nombre_editorial)
+
+tabla_lector (id_lector, nombre_lector)
+
+tabla_préstamo (id_préstamo, fecha_inicio_préstamo, fecha_fin_préstamo )
