@@ -1,0 +1,1 @@
+prestamo_libro(id_libro, título_libro, autor_libro,{editorial},{lector},id_prestamo,fecha_incio_prestamo, fecha_fin_prestamo)
