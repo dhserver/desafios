@@ -29,6 +29,7 @@ CREATE TABLE LibroEditorial(
 );
 
 CREATE TABLE prestamo(
+    id_prestamo SERIAL PRIMARY KEY,
     id_lector INT REFERENCES lector(id_lector),
     id_libro INT REFERENCES libro(id_libro)
 );
