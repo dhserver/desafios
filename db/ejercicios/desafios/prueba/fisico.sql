@@ -19,8 +19,6 @@ CREATE TABLE Factura(
 
 );
 
-INSERT INTO Factura (num_fact, Fecha, id_cliente) VALUES ('201','2020-07-31','1');
-
 CREATE TABLE Categoria(
     id_categoria SERIAL PRIMARY KEY,
     nombre VARCHAR(15),
