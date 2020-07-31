@@ -13,4 +13,4 @@ tabla_editorial(#id_editorial, nombre_editorial)
 
 tabla_lector (#id_lector, nombre_lector)
 
-tabla_préstamo (#id_préstamo, fecha_inicio_préstamo, fecha_fin_préstamo )
+tabla_préstamo (#id_lector, #id_libro, fecha_de_devolucion)
