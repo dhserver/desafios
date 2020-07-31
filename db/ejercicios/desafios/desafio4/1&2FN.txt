@@ -5,12 +5,12 @@ prestamo(id_libro, título_libro, {id_autor},{editorial},{lector},id_préstamo,f
 
 2FN
 
-tabla_libro( id_libro, título_libro)
+tabla_libro( #id_libro, título_libro)
 
-tabla_auto(id_autor, nombre_autor)
+tabla_autor(#id_autor, nombre_autor)
 
-tabla_editorial(id_editorial, nombre_editorial)
+tabla_editorial(#id_editorial, nombre_editorial)
 
-tabla_lector (id_lector, nombre_lector)
+tabla_lector (#id_lector, nombre_lector)
 
-tabla_préstamo (id_préstamo, fecha_inicio_préstamo, fecha_fin_préstamo )
+tabla_préstamo #(id_préstamo, fecha_inicio_préstamo, fecha_fin_préstamo )
